@@ -1,23 +1,56 @@
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Ingredient from './components/Ingredient';
+import { useState } from 'react';
 
 function App() {
+  const [ingredients, setIngredients] = useState([]);
+  const [ingURL, setIngURL] = useState("");
+  const [name, setName] = useState("");
+
+  const addToSandwich = (e) => {
+    e.preventDefault();
+    setIngredients([...ingredients, {
+      name: name,
+      location: ingURL
+    }]);
+  }
+
+  const onClickDelete = (index) => {
+    setIngredients([...ingredients.slice(0,index)  
+    ].concat(ingredients.slice(index + 1)))
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-light mx-auto">
+      <form onSubmit={addToSandwich}>
+        <div className="form-group col-5">
+          <input 
+            className="form-control"
+            placeholder="what's on your sandwich??"
+            onChange={(e) => setName(e.target.value)}>
+          </input>
+        </div>
+
+        <div className="form-group col-5">
+          <input 
+            className="form-control"
+            placeholder="enter URL"
+            onChange={(e) => setIngURL(e.target.value)}>
+          </input>
+        </div>
+
+        <div className="form-group">
+          <input className="btn btn-primary" type="submit"></input>
+        </div>
+      </form>
+
+      {
+        ingredients.map((ing, i) => {
+          return <Ingredient source={ing.location} onClickDelete={onClickDelete} index={i} key={i}/>
+        })
+      }
     </div>
   );
 }

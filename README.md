@@ -19,13 +19,13 @@ with your gracious hosts: @NicholeKing and @mazurasdf
 * `git push -u origin main` (add everything you staged with git add to your repo)
 
 #### Update an existing project
-* cd into the project from terminal (need to be inside the project)
+* cd into the project from terminal (need to be inside your project)
 * `git add .` (adds all the files you changed, staging it for pushing into github)
 * `git commit -m "Second commit or whatever"` (Give a descriptive name to what you're editing)
 * `git push` (add everything you just committed to your repo)
 
 #### Other handy git commands
 * `git pull` downloads any updates made by yourself or other collaborators
-* `git checkout nameOfBranch` if you have multiple branches, this will changing the working branch
+* `git checkout nameOfBranch` if you have multiple branches, this will change the working branch
 
 :broccoli: :broccoli: :broccoli:

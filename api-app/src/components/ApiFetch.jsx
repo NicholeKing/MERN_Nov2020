@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import axios from 'axios';
 
 const ApiFetch = () => {
     // const noMondays = new Promise((resolve, reject) => {
@@ -23,14 +24,21 @@ const ApiFetch = () => {
     //     })
 
     //Version #2 (intro useEffect)
+    // useEffect(() => {
+    //     fetch("https://pokeapi.co/api/v2/pokemon")
+    //         .then(response => response.json())
+    //         .then(response => console.log(response.results))
+    // }, [])
+
+    //Version #3 (Axios)
     useEffect(() => {
-        fetch("https://pokeapi.co/api/v2/pokemon")
-            .then(response => response.json())
-            .then(response => console.log(response.results))
+        axios.get("https://geek-jokes.sameerkumar.website/api?format=json")
+            .then(response=>console.log(response))
     }, [])
     return(
         <>
             <h1>Hello from the Api Component</h1>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png" alt=""/>
         </>
     )
 }

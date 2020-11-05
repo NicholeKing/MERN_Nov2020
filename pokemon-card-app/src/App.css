@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.jumbotron {
+  background-color: #0078f8 !important;
+  color: #f8d878;
+  margin-bottom: 0px !important;
+  border-radius: 0px !important;
+}

@@ -18,8 +18,8 @@ function App() {
   }
 
   const onClickDelete = (index) => {
-    setIngredients([...ingredients.slice(0,index)  
-    ].concat(ingredients.slice(index + 1)))
+    //sets the array in state to include everything before selected item and everything after selected item
+    setIngredients([...ingredients.slice(0,index), ...ingredients.slice(index + 1)])
   }
 
   return (

@@ -14,9 +14,9 @@
 ### Sending a POST request through postman
 
 #### You can type in raw JSON by entering these settings
-![raw JSON](/img/jsonData.png)
+![raw JSON](https://github.com/NicholeKing/MERN_Nov2020/blob/main/express-demo/img/jsonData.PNG?raw=true)
 
 #### You can enter the form data more explicitly like so
-![form data entry](/img/formData.png)
+![form data entry](https://github.com/NicholeKing/MERN_Nov2020/blob/main/express-demo/img/formData.PNG?raw=true)
 
 If you want to see more, read [Postman's documentation here](https://learning.postman.com/docs/sending-requests/requests/#url-encoded)

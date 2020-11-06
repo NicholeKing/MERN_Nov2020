@@ -10,3 +10,13 @@
 * In project folder, run `npm install`
 * run `node server.js` or preferably `nodemon server.js`
 * Check the requests in Postman
+
+### Sending a POST request through postman
+
+#### You can type in raw JSON by entering these settings
+![raw JSON](/img/jsonData.png)
+
+#### You can enter the form data more explicitly like so
+![form data entry](/img/formData.png)
+
+If you want to see more, read [Postman's documentation here](https://learning.postman.com/docs/sending-requests/requests/#url-encoded)

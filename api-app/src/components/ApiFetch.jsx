@@ -14,14 +14,14 @@ const ApiFetch = () => {
     //     .catch(err => console.log(err));
     
     //Version #1 (basic fetch)
-    // fetch("https://pokeapi.co/api/v2/pokemon?limit=60&offset=60")
-    //     .then(response => {
-    //         return response.json();
-    //     }).then(response => {
-    //         console.log(response);
-    //     }).catch(err=>{
-    //         console.log(err);
-    //     })
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=60&offset=60")
+        .then(response => {
+            return response.json();
+        }).then(response => {
+            console.log(response);
+        }).catch(err=>{
+            console.log(err);
+        })
 
     //Version #2 (intro useEffect)
     // useEffect(() => {
@@ -31,10 +31,10 @@ const ApiFetch = () => {
     // }, [])
 
     //Version #3 (Axios)
-    useEffect(() => {
-        axios.get("https://geek-jokes.sameerkumar.website/api?format=json")
-            .then(response=>console.log(response))
-    }, [])
+    // useEffect(() => {
+    //     axios.get("https://geek-jokes.sameerkumar.website/api?format=json")
+    //         .then(response=>console.log(response))
+    // }, [])
     return(
         <>
             <h1>Hello from the Api Component</h1>

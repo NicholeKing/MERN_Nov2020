@@ -7,7 +7,7 @@
 * run `npm install express mongoose cors`
     * this adds all the necessary dependencies for our back end
 * set up the file structure as such
-    * ![back end structure](https://github.com/NicholeKing/MERN_Nov2020/tree/main/full-stack-lecture/img/backend_structure.PNG)
+    * ![back end structure](https://github.com/NicholeKing/MERN_Nov2020/blob/main/full-stack-lecture/img/backend_structure.PNG?raw=true)
     * don't forget to add the files and code in the server folder!
 * create the frontend by running `npx create-react-app client` from the main project folder
 * `cd client/`

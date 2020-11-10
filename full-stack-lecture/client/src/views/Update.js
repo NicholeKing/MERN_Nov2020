@@ -1,14 +1,22 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Form from '../components/Form';
 import { navigate } from "@reach/router";
 
-const Create = (props) => {
+const Update = (props) => {
     const [form, setForm] = useState({
         name: "",
         type: "",
         color: ""
     })
+
+    useEffect(() => {
+        axios.get(`http://localhost:8000/api/plants/${props._id}`)
+            .then(res => {
+                console.log(res.data);
+                setForm(res.data.plant);
+            })
+    }, [])
 
     const onChangeHandler = (e) => {
         e.preventDefault();
@@ -21,18 +29,15 @@ const Create = (props) => {
     const onSubmitHandler = (e) => {
         e.preventDefault();
         console.log(form);
-        axios.post("http://localhost:8000/api/plants/new", form)
+        axios.put(`http://localhost:8000/api/plants/update/${props._id}`, form)
             .then(res => console.log(res))
             .then(res => navigate("/"))
     }
-
     return(
         <div>
-            <h1>Create a new plant!</h1>
-
             <Form onSubmitHandler={onSubmitHandler} onChangeHandler={onChangeHandler} form={form} />
         </div>
     )
 }
 
-export default Create;
+export default Update;

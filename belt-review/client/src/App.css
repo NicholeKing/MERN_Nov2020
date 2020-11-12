@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.navig {
+  display: inline-block;
+}
+
+.jumbotron {
+  background-image: url("./assets/images/heartsBG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
